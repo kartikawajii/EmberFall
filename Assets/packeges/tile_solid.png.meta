@@ -116,12 +116,12 @@ TextureImporter:
       name: tile_solid_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 0
         y: 8
-        width: 239
+        width: 256
         height: 239
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bdc8302e3efc1ba43b1b9bf93105cfb1
     internalID: 0
     vertices: []
     indices: 
