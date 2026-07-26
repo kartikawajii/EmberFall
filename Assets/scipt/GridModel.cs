@@ -15,9 +15,6 @@ namespace GridPuzzle.Core
 
         public GridModel(int columns, int rows, Vector2Int startPosition, Vector2Int exitPosition, int moveLimit)
         {
-            if (columns <= 0 || rows <= 0)
-                throw new ArgumentException("Grid dimensions must be positive.");
-
             Columns = columns;
             Rows = rows;
             PlayerPosition = startPosition;
@@ -83,7 +80,6 @@ namespace GridPuzzle.Core
             };
         }
 
-        /// <summary>Used only by HistoryManager to rewind state on Undo.</summary>
         public void RestoreState(Vector2Int position, int movesRemaining)
         {
             PlayerPosition = position;
