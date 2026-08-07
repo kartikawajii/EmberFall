@@ -3,7 +3,13 @@ using GridPuzzle.Gameplay;
 
 namespace GridPuzzle.UI
 {
-    
+    /// <summary>
+    /// Deadline-friendly HUD using Unity's immediate-mode OnGUI — no Canvas,
+    /// no TextMeshPro import, no prefab wiring required. Shows moves
+    /// remaining, an Undo button, a Restart button, and the win/lose
+    /// message. Swap for a proper Canvas + TextMeshPro HUD later if you
+    /// have time after submitting.
+    /// </summary>
     public class SimpleHUD : MonoBehaviour
     {
         [SerializeField] private GameController gameController;

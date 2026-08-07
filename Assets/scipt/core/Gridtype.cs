@@ -1,9 +1,10 @@
 using System;
-using UnityEngine;
+using UnityEngine; // only for Vector2Int — a plain value struct, not a scene object
 
 namespace GridPuzzle.Core
 {
     public enum Direction { Up, Down, Left, Right }
+
     public enum TileState { Solid, Cracked, Lava }
 
     [Serializable]

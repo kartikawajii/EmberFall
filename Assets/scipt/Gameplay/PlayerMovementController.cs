@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using GridPuzzle.Gameplay;
 
 namespace GridPuzzle.Gameplay
 {

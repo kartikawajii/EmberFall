@@ -4,7 +4,13 @@ using GridPuzzle.Core;
 
 namespace GridPuzzle.Input
 {
-    
+    /// <summary>
+    /// Detects swipe direction on mobile (touch) and arrow keys/WASD in the
+    /// editor. Uses the legacy UnityEngine.Input class deliberately — no
+    /// package install required, which matters when you're racing a
+    /// deadline. Knows nothing about GridModel or grid coordinates; it
+    /// only raises a Direction event.
+    /// </summary>
     public class SwipeInputController : MonoBehaviour
     {
         [SerializeField] private float swipeThreshold = 50f;

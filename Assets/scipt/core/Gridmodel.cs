@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace GridPuzzle.Core
 {
+    /// <summary>
+    /// Single source of truth for board state. Not a MonoBehaviour — no
+    /// GameObject, Transform, or scene reference anywhere in this file.
+    /// </summary>
     public class GridModel
     {
         public int Columns { get; }
@@ -15,6 +19,9 @@ namespace GridPuzzle.Core
 
         public GridModel(int columns, int rows, Vector2Int startPosition, Vector2Int exitPosition, int moveLimit)
         {
+            if (columns <= 0 || rows <= 0)
+                throw new ArgumentException("Grid dimensions must be positive.");
+
             Columns = columns;
             Rows = rows;
             PlayerPosition = startPosition;
@@ -80,6 +87,7 @@ namespace GridPuzzle.Core
             };
         }
 
+        /// <summary>Used only by HistoryManager to rewind state on Undo.</summary>
         public void RestoreState(Vector2Int position, int movesRemaining)
         {
             PlayerPosition = position;
